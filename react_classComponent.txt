@@ -1,0 +1,34 @@
+import React from 'react';
+
+//1. Render
+//2. ComponentDidMount
+//2. ComponentwillUnmount
+
+
+class App extends React.Component{
+
+  constructor(){// Mirst method to be exicuted but no a lifecycle method
+    super();// To access the parent's metod
+
+    console.log("Constuctor is been called");
+  }
+  render(){//second method to bi executed
+     console.log("Render method is been called");
+     return(
+    <div>
+      <p>Hello World</p>
+    </div>
+     );
+  }
+  componentDidMount(){// Third method to be executed
+    //All heavy lifting job is been executed here, for eg- api calls
+    console.log(" componentDidMoun is called");
+
+  }
+
+  componentWillUnmount(){
+    // It executes when component dies
+    console.log("coponentWillUnmount is been called");
+  }
+}
+export default App;
