@@ -1,0 +1,25 @@
+import React,{useState} from "react";
+import CustomText from "./component/CustomText";
+const App=()=>{
+   const [counter,setCounter] = useState(0);
+   const [name, setName]=useState("ABC");
+   //Destructring an array from usestate
+   //0th index to read
+   //1st index to update
+   const incrementCounterByOne=()=>{
+    setCounter(counter+5);
+   }
+    return(
+        < CustomText
+        /* <p onClick={()=> incrementCounterByOne()}> counter - {counter}</p>
+        <p onClick={()=> setName("XYZ")}> change my name - {name}</p> */
+
+        counter={counter}
+        incrementCounterByOne={incrementCounterByOne}
+
+        />
+    
+    )
+}
+
+export default App;
